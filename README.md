@@ -28,7 +28,7 @@ The gradient widget has the following options:
 
 To initialize a gradient widget, just create an empty div, reference that with jQuery, and invoke the gradient method, e.g.
 
-$('.my-colorpicker').gradient();
+$('.my-gradient-colorpicker').gradient();
 
 ### License
 MIT License - see LICENSE for more
