@@ -1,0 +1,45 @@
+.md-gradient-slider {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 180px;
+    left: -5px;
+    top: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.gradient-color-stop {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    border: 0;
+    z-index: 0;
+}
+.gradient-color-stop-bg {
+    background: url('images/alpha-bg-6x6.png');
+    z-index: 0;
+}
+.gradient-color-stop-color {
+    z-index: 1;
+}
+.gradient-color-stop-bg,
+.gradient-color-stop-color {
+    position: absolute;
+    border-style: solid;
+    border-color: #444;
+    border-width: 0 1px 1px 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 6px;
+    border-radius: 0 0 2px 2px;
+
+}
+.gradient-color-stop-pointer {
+    position: absolute;
+}

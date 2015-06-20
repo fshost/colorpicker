@@ -1,0 +1,3 @@
+{
+    "dependencies": ["jquery", "jquery-ui", "jquery-utils"]
+}

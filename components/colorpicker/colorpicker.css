@@ -1,0 +1,150 @@
+.md-colorpicker-container {
+    position: relative;
+    clear: left;
+}
+.md-colorpicker {
+    position: relative;
+    width: 194px;
+    height: 168px;
+    border: 1px solid #000;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.md-cp-lightness-saturation-slider,
+.md-cp-hue-slider,
+.md-cp-alpha-slider {
+    overflow: visible;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 144px;
+    float: left;
+    border-bottom: 1px solid #000;
+}
+.md-cp-lightness-saturation-slider {
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 0 1px 0;
+    width: 144px;
+    cursor: crosshair;
+    background-image: url('images/saturation-lightness-slider-overlay-144x144.png');
+}
+.md-cp-lightness-saturation-slider i {
+    position: absolute;
+    top: 0; left: 0;
+    margin: -4px 0 0 -4px;
+    border: 1px solid #000;
+    height: 5px; width: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+}
+.md-cp-lightness-saturation-slider i b {
+    display: block;
+    height: 5px;
+    width: 5px;
+    border: 1px solid #585858;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.md-cp-hue-slider,
+.md-cp-alpha-slider {
+    width: 24px;
+}
+.md-cp-hue-slider {
+    border: 1px solid black;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 1px 1px 1px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhMTQxNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZmYwMDExIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTYlIiBzdG9wLWNvbG9yPSIjZmYwMGZhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTclIiBzdG9wLWNvbG9yPSIjZjYwMGZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMmQwMGZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzMlIiBzdG9wLWNvbG9yPSIjMDEwMmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjMDBmN2ZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTElIiBzdG9wLWNvbG9yPSIjMDBmZmY4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjclIiBzdG9wLWNvbG9yPSIjMDFmZjAzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjglIiBzdG9wLWNvbG9yPSIjMGRmZjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODMlIiBzdG9wLWNvbG9yPSIjZjVmZjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODQlIiBzdG9wLWNvbG9yPSIjZmZmYTAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZmYxNDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4MTIwZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top,  #ea1416 0%, #ff0011 1%, #ff00fa 16%, #f600ff 17%, #2d00ff 30%, #0102ff 33%, #00f7ff 49%, #00fff8 51%, #01ff03 67%, #0dff00 68%, #f5ff00 83%, #fffa00 84%, #ff1400 99%, #f8120e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea1416), color-stop(1%,#ff0011), color-stop(16%,#ff00fa), color-stop(17%,#f600ff), color-stop(30%,#2d00ff), color-stop(33%,#0102ff), color-stop(49%,#00f7ff), color-stop(51%,#00fff8), color-stop(67%,#01ff03), color-stop(68%,#0dff00), color-stop(83%,#f5ff00), color-stop(84%,#fffa00), color-stop(99%,#ff1400), color-stop(100%,#f8120e));
+    background: -webkit-linear-gradient(top,  #ea1416 0%,#ff0011 1%,#ff00fa 16%,#f600ff 17%,#2d00ff 30%,#0102ff 33%,#00f7ff 49%,#00fff8 51%,#01ff03 67%,#0dff00 68%,#f5ff00 83%,#fffa00 84%,#ff1400 99%,#f8120e 100%);
+    background: -o-linear-gradient(top,  #ea1416 0%,#ff0011 1%,#ff00fa 16%,#f600ff 17%,#2d00ff 30%,#0102ff 33%,#00f7ff 49%,#00fff8 51%,#01ff03 67%,#0dff00 68%,#f5ff00 83%,#fffa00 84%,#ff1400 99%,#f8120e 100%);
+    background: -ms-linear-gradient(top,  #ea1416 0%,#ff0011 1%,#ff00fa 16%,#f600ff 17%,#2d00ff 30%,#0102ff 33%,#00f7ff 49%,#00fff8 51%,#01ff03 67%,#0dff00 68%,#f5ff00 83%,#fffa00 84%,#ff1400 99%,#f8120e 100%);
+    background: linear-gradient(to bottom,  #ea1416 0%,#ff0011 1%,#ff00fa 16%,#f600ff 17%,#2d00ff 30%,#0102ff 33%,#00f7ff 49%,#00fff8 51%,#01ff03 67%,#0dff00 68%,#f5ff00 83%,#fffa00 84%,#ff1400 99%,#f8120e 100%);
+}
+.md-cp-alpha-slider {
+    background-color: #333;
+    background: url('images/alpha-slider-overlay-16x144.png');
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 0 1px 0;
+}
+.md-colorpicker-preview-bg {
+    clear: left;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 169px;
+    background: url('images/alpha-bg-8x8.png');
+}
+.md-colorpicker-preview {
+    position: relative;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 1px 0 0;
+    height: 24px;
+    width: 169px;
+}
+.md-colorpicker-values {
+    position: absolute;
+    top: 40px;
+    left: 204px;
+    height: 130px;
+}
+.md-colorpicker-label,
+.md-colorpicker-values .md-colorpicker-input {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 12px;
+}
+.md-colorpicker-label {
+    margin: 4px;
+}
+.md-colorpicker-label-rgba {
+    margin: 0 6px 0 6px;
+}
+.md-colorpicker-input {
+    font-size: 15px;
+    border-width: 1px;
+    padding: 2px;
+    margin: 2px 4px 2px 0;
+}
+.md-colorpicker-input-rgba  {
+    width: 38px;
+}
+.md-colorpicker-input-value {
+    position: absolute;
+    width: 64px;
+    bottom: 0;
+    margin: 0;
+}
+
+/* presets */
+.md-colorpicker-presets {
+   position: absolute;
+    top: 0;
+    left: 204px;
+    /*height: 170px;*/
+    height: 34px;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+.md-colorpicker-preset {
+    display: block;
+    float: left;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}

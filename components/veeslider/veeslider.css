@@ -1,0 +1,59 @@
+.md-veeslider {
+    overflow: visible;
+}
+.md-veeslider-knob {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.md-veeslider-containment {
+    position: relative;
+    z-index: 0;
+}
+.md-vee-knob-vertical {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 6px;
+    cursor: pointer;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: scale(1.1);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border-color: transparent;
+    border-style: solid;
+    border-right-color: black;
+    border-left-color: black;
+    border-width: 4px 9px;
+    cursor: pointer;
+    cursor: ns-resize;
+}
+
+.md-vee-knob-horizontal {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 6px;
+    cursor: pointer;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: scale(1.1);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border-color: transparent;
+    border-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-width: 9px 3px;
+    cursor: pointer;
+    cursor: ew-resize;
+}
