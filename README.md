@@ -26,5 +26,9 @@ The gradient widget has the following options:
 - defaultStops: An object specifying the default stops to use initially.  Defaults to white and black.
 - change: a function to call when the gradient changes.
 
+To initialize a gradient widget, just create an empty div, reference that with jQuery, and invoke the gradient method, e.g.
+
+$('.my-colorpicker').gradient();
+
 ### License
 MIT License - see LICENSE for more
