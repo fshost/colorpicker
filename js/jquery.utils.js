@@ -5,6 +5,28 @@
  */
 (function($, undefined) {
 
+   /*--------------------------------------------------------------------
+     * jQuery.camelCase - convert dash-sep string to camelCase string
+     * examples:
+     *   $.camelCase('margin-left'); // => 'marginLeft'
+     *   $.camelCase('border-top-width'); // => 'borderTopWidth'
+     *--------------------------------------------------------------------*/
+    $.camelCase = function(str) {
+        return str.replace(/-([a-z])/ig, function(word, letter) {
+            return letter.toUpperCase();
+        });
+    };
+
+    /*--------------------------------------------------------------------
+     * jQuery.dasherize - convert camelCase string to dash-sep string
+     * examples:
+     *   $.dasherize('marginLeft'); // => 'margin-left'
+     *   $.dasherize('borderTopWidth'); // => 'border-top-width'
+     *--------------------------------------------------------------------*/
+    $.dasherize = function(str) {
+        return $.trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
+    };
+    
     /***
      * find descendant element by classname
      * equivalent to $.fn.find('.' + className)
