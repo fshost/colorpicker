@@ -2,7 +2,7 @@
 A jQuery UI colorpicker widget and a gradient stops widget
 
 ### Examples
-See colorpicker.html and gradient.html
+See colorpicker.html and gradient.html in the demos directory
 
 ### About
 Having been unable to find a colorpicker that I liked I decided to create my own.  Subsequently I added the option for a gradient colorpicker widget.  These widgets makes use of another minor widget - the veeslider, as well as some utility plugins.
