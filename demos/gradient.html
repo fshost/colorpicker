@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Gradient Widget</title>
+    <link href="../external/jquery-ui-1.11.4.min.css" rel="stylesheet">
+    <link href="../css/jquery-ui.veeslider.css" rel="stylesheet">
+    <link href="../css/jquery-ui.colorpicker.css" rel="stylesheet">
+    <link href="../css/jquery-ui.gradient.css" rel="stylesheet">
+    <script src="../external/jquery-1.11.3.min.js"></script>
+    <script src="../external/jquery-ui-1.11.4.min.js"></script>
+    <script src="../js/jquery.utils.js"></script>
+    <script src="../js/jquery-ui.veeslider.js"></script>
+    <script src="../js/jquery-ui.colorpicker.js"></script>
+    <script src="../js/jquery-ui.gradient.js"></script>
+    <style>
+        .instruction {
+            font-family: Sans-Serif;
+        }
+    </style>
+    <script>
+        $(function () {
+
+            $('.demo').gradient({
+                change: function (event, ui) {
+                    console.log(ui.value);
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery UI Gradient Widget Demo</h2>
+    <div class="demo"></div>
+    <div class="instruction">
+        <p>Double click below preview bar to add new stop.</p>
+        <p>Drag stop off of preview bar to remove stop.</p>
+        <p>Click on stop in order to change stop color, then use colorpicker to change it.</p>
+    </div>
+</body>
+</html>

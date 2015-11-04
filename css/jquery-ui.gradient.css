@@ -42,4 +42,16 @@
 }
 .gradient-color-stop-pointer {
     position: absolute;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #333;
+    transform: rotate(360deg);
+    -moz-transform: scale(1.1);
+    border-right-width: 6px;
+    border-left-width: 6px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-width: 0;
+    border-bottom-width: 6px;
 }

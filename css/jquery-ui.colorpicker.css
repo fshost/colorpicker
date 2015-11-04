@@ -18,7 +18,7 @@
 .md-cp-lightness-saturation-slider,
 .md-cp-hue-slider,
 .md-cp-alpha-slider {
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     top: 0;
     left: 0;

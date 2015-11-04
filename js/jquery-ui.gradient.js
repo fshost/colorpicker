@@ -21,6 +21,16 @@
                 csBg: 'gradient-color-stop-bg'
             }
         },
+        _template: [
+            '<div class="md-gradient-colorpicker"></div>',
+            '<div class="md-gradient-slider">',
+            '<div class="gradient-color-stop">',
+            '<div class="gradient-color-stop-pointer"></div>',
+            '<div class="gradient-color-stop-color"></div>',
+            '<div class="gradient-color-stop-bg"></div>',
+            '</div>',
+            '</div>'
+        ].join(''),
         _setOptions: function(options) {
             this._superApply(arguments);
         },
@@ -74,7 +84,7 @@
                 that.colorpicker._setOption('color', curColor);
             };
         },
-        cssValue: function () {
+        cssValue: function() {
             return this._cssValue;
         },
         _change: function() {
@@ -98,49 +108,48 @@
             var o = this.options,
                 that = this,
                 stop = this._colorStopTemplate.clone().appendTo(this.slider)
-                    .mousedown(this._colorStopMousedownHandler())
-                    .draggable({
-                        containment: this.slider,
-                        /* start: function(event, ui) {
-                            console.log('started dragging');
-                        },*/
-                        grid: [1, 20],
-                        drag: function(event, ui) {
-                            var curStop = $(this),
-                                sliderOffset = that.slider.offset(),
-                                mouseTop = event.pageY - sliderOffset.top;
-                            if (mouseTop > 19) {
-                                curStop.css('cursor', 'not-allowed');
-                                curStop.draggable('option', 'grid', false);
-                            } else {
-                                curStop.css('cursor', 'auto');
-                                if (curStop.is('.ui-draggable'))
-                                    curStop.draggable('option', 'grid', [1, 20]);
-                            }
-                            that._refresh();
-                        },
-                        stop: function(event, ui) {
-                            var curStop = $(this),
-                                sliderOffset = that.slider.offset(),
-                                mouseTop = event.pageY - sliderOffset.top;
+                .mousedown(this._colorStopMousedownHandler())
+                .draggable({
+                    containment: this.slider,
+                    /* start: function(event, ui) {
+                        console.log('started dragging');
+                    },*/
+                    grid: [1, 20],
+                    drag: function(event, ui) {
+                        var curStop = $(this),
+                            sliderOffset = that.slider.offset(),
+                            mouseTop = event.pageY - sliderOffset.top;
+                        if (mouseTop > 19) {
+                            curStop.css('cursor', 'not-allowed');
+                            curStop.draggable('option', 'grid', false);
+                        } else {
                             curStop.css('cursor', 'auto');
-                            if (ui.position.top > 5) {
-                                if (that._stops.length > 2) {
-                                    curStop.draggable('destroy');
-                                    that._stops = that._stops.not(curStop);
-                                    curStop.remove();
-                                }
-                                else {
-                                    curStop.css('top', 0);
-                                    that.disable();
-                                }
-
-                            } else if (mouseTop > 0 || ui.position.top !== 0) {
-                                curStop.css('top', 0);
-                            }
-                            that._refresh();
+                            if (curStop.is('.ui-draggable'))
+                                curStop.draggable('option', 'grid', [1, 20]);
                         }
-                    }),
+                        that._refresh();
+                    },
+                    stop: function(event, ui) {
+                        var curStop = $(this),
+                            sliderOffset = that.slider.offset(),
+                            mouseTop = event.pageY - sliderOffset.top;
+                        curStop.css('cursor', 'auto');
+                        if (ui.position.top > 5) {
+                            if (that._stops.length > 2) {
+                                curStop.draggable('destroy');
+                                that._stops = that._stops.not(curStop);
+                                curStop.remove();
+                            } else {
+                                curStop.css('top', 0);
+                                that.disable();
+                            }
+
+                        } else if (mouseTop > 0 || ui.position.top !== 0) {
+                            curStop.css('top', 0);
+                        }
+                        that._refresh();
+                    }
+                }),
                 stopColorElem = stop.findClass(o.classes.csColor);
             this.colorpicker.options.bind = [{
                 element: stopColorElem,
@@ -181,7 +190,10 @@
         _create: function() {
             var maxPos,
                 o = this.options;
-            this.element.addTemplate('gradient');
+            
+            this.element.append(this._template);
+            this.element.findClass(o.classes.colorpicker).colorpicker();
+            
             this._stops = $();
             this.colorpicker = this.element.findClass(o.classes.colorpicker).data('mdColorpicker');
             this.preview = this.colorpicker.preview;
